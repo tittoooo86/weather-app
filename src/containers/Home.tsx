@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
+import {Weather} from '../components';
+
 export interface HomeProps {}
 
 const styles = StyleSheet.create({
@@ -15,7 +17,7 @@ class Home extends Component<HomeProps> {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Home</Text>
+        <Weather />
       </View>
     );
   }

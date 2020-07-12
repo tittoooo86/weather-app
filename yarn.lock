@@ -1120,6 +1120,16 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/eslint-plugin/-/eslint-plugin-1.1.0.tgz#e42b1bef12d2415411519fd528e64b593b1363dc"
   integrity sha512-W/J0fNYVO01tioHjvYWQ9m6RgndVtbElzYozBq1ZPrHO/iCzlqoySHl4gO/fpCl9QEFjvJfjPgtPMTMlsoq5DQ==
 
+"@react-native-community/masked-view@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@react-native-community/masked-view/-/masked-view-0.1.10.tgz#5dda643e19e587793bc2034dd9bf7398ad43d401"
+  integrity sha512-rk4sWFsmtOw8oyx8SD3KSvawwaK7gRBSEIy2TAwURyGt+3TizssXP1r8nx3zY+R7v2vYYHXZ+k2/GULAT/bcaQ==
+
+"@shopify/restyle@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@shopify/restyle/-/restyle-1.0.4.tgz#164b160c53741dfbedffa6ccc67d6680f641d9a7"
+  integrity sha512-vfeAiNKWryNZ2OxIWzRt4iE+fFeMBp4xE7VZwRJI6wnf4wHgjx2IX1sKEvL9rQx2ztIuqfIbR1p/d5XzhEU6Tw==
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.0.tgz#c8d68821a854c555bba172f3b06959a0039b236d"
@@ -1371,6 +1381,11 @@ acorn@^7.1.0, acorn@^7.1.1:
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.3.1.tgz#85010754db53c3fbaf3b9ea3e083aa5c5d147ffd"
   integrity sha512-tLc0wSnatxAQHVHUapaHdz72pi9KUyHjq5KyHjGg9Y8Ifdc79pTh2XvI6I1/chZbnM7QtNKzh66ooDogPZSleA==
+
+add@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
 
 ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.5:
   version "6.12.3"
@@ -4847,6 +4862,11 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "^1.2.5"
 
+moment@^2.27.0:
+  version "2.27.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.27.0.tgz#8bff4e3e26a236220dfe3e36de756b6ebaa0105d"
+  integrity sha512-al0MUK7cpIcglMv3YF13qSgdAIqxHTO7brRtaz3DlSULbqfazqkc5kEjNrLDOM7fsjshoFIihnU8snrP7zUvhQ==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -5411,7 +5431,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.4"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -5465,6 +5485,24 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-native-animated-linear-gradient@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-native-animated-linear-gradient/-/react-native-animated-linear-gradient-1.2.2.tgz#379e38039592f412a0b408fcba44d2223dd317ed"
+  integrity sha512-V7gz1Xe85YstNCPvVsf+9/Qb2HRLccGIzJmkbKQZjaFNt9wqSTK+Owh6DdJTAAGLycQDNqoqr4gWvUpoB7WT+Q==
+  dependencies:
+    prop-types "^15.6.0"
+    rgb2hex "^0.1.0"
+
+react-native-linear-gradient@^2.5.6:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
+  integrity sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg==
+
+react-native-radial-gradient@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/react-native-radial-gradient/-/react-native-radial-gradient-1.0.7.tgz#e85556c53deb22d6bd54497bf65a65fb713f0369"
+  integrity sha512-Wt1yYwZo4MTIrndiVXBXSGV6og3fYEZNUubUSeG6f0OqATW50MEx+gbB1fdKr1S5ont8j3ee64r4qobdWe1RJg==
 
 react-native@0.63.0:
   version "0.63.0"
@@ -5760,6 +5798,11 @@ ret@~0.1.10:
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
+
+rgb2hex@^0.1.0:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/rgb2hex/-/rgb2hex-0.1.10.tgz#4fdd432665273e2d5900434940ceba0a04c8a8a8"
+  integrity sha512-vKz+kzolWbL3rke/xeTE2+6vHmZnNxGyDnaVW4OckntAIcc7DcZzWkQSfxMDwqHS8vhgySnIFyBUH7lIk6PxvQ==
 
 rimraf@2.6.3:
   version "2.6.3"
@@ -6991,3 +7034,8 @@ yargs@^15.1.0, yargs@^15.3.1:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
+
+yarn@^1.22.4:
+  version "1.22.4"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.4.tgz#01c1197ca5b27f21edc8bc472cd4c8ce0e5a470e"
+  integrity sha512-oYM7hi/lIWm9bCoDMEWgffW8aiNZXCWeZ1/tGy0DWrN6vmzjCXIKu2Y21o8DYVBUtiktwKcNoxyGl/2iKLUNGA==
