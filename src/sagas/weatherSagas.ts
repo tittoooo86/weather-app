@@ -11,7 +11,11 @@ import {BaseAction} from '../types';
 function* fetchWeather(action: BaseAction) {
   try {
     const weatherData = yield call(API.fetchWeather, action.payload);
-    yield put(fetchWeatherSuccess(weatherData));
+    if (weatherData.cod === 401) {
+      yield put(fetchWeatherFailure(weatherData.message));
+    } else {
+      yield put(fetchWeatherSuccess(weatherData));
+    }
   } catch (e) {
     yield put(fetchWeatherFailure(e.message));
   }

@@ -10,7 +10,6 @@ const initialState: AppReducerState = {
 };
 
 export default function appReducer(state = initialState, action: any = {}) {
-  console.log('APP REDUCEER: ', action.payload);
   switch (action.type) {
     case APP.SET_STORE_STATE:
       return Object.assign({}, initialState, state, action.payload);

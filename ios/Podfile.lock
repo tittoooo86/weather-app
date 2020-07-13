@@ -240,6 +240,8 @@ PODS:
     - React-cxxreact (= 0.63.0)
     - React-jsi (= 0.63.0)
   - React-jsinspector (0.63.0)
+  - react-native-config (1.2.1):
+    - React
   - react-native-geocoder-reborn (0.9.0):
     - React
   - react-native-geolocation (2.0.2):
@@ -359,6 +361,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-config (from `../node_modules/react-native-config`)
   - react-native-geocoder-reborn (from `../node_modules/react-native-geocoder-reborn`)
   - "react-native-geolocation (from `../node_modules/@react-native-community/geolocation`)"
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
@@ -429,6 +432,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-config:
+    :path: "../node_modules/react-native-config"
   react-native-geocoder-reborn:
     :path: "../node_modules/react-native-geocoder-reborn"
   react-native-geolocation:
@@ -497,6 +502,7 @@ SPEC CHECKSUMS:
   React-jsi: 254710f3a97e587427bfbf3011dacec2af66a1fc
   React-jsiexecutor: 0e0cb4e170ca72d4bb1179843d08dcbea3d100ac
   React-jsinspector: fc661eff8edbfb7e22119382c13f33bcadde0f3c
+  react-native-config: ae9ef3bdbf539f2d14ebaf4ebeba508f766e066a
   react-native-geocoder-reborn: c31cbc630d9307ebbceea1dea2746d0054be35c4
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865

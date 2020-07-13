@@ -5587,6 +5587,11 @@ react-native-animated-linear-gradient@^1.2.2:
     prop-types "^15.6.0"
     rgb2hex "^0.1.0"
 
+react-native-config@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-1.2.1.tgz#f80454fc58ea89b549819ccb4bdab26518a9f0db"
+  integrity sha512-u7MDku3fUUKAtxfUFLLwnj4htBYO840EBGdlDB9ry/eX1TY+asHwULaUkAj9x+pJo4vSpIp8GtYxxi8dLzDtJw==
+
 react-native-easy-icon@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/react-native-easy-icon/-/react-native-easy-icon-1.0.2.tgz#221aba5c28d6fb84331a3bae90d5c3bfb3c24fb0"

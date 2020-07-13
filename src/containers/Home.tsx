@@ -1,5 +1,11 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, ActivityIndicator, Platform} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  ActivityIndicator,
+  Platform,
+  Text,
+} from 'react-native';
 import {connect} from 'react-redux';
 import Geolocation from '@react-native-community/geolocation';
 import Geocoder from 'react-native-geocoder-reborn';
@@ -10,6 +16,7 @@ import {
   request,
   openSettings,
 } from 'react-native-permissions';
+import Config from 'react-native-config';
 
 import {Weather} from '../components';
 import {fetchWeather} from '../actions/weatherActions';
@@ -18,6 +25,7 @@ import {WeatherData} from '../types';
 export interface HomeProps {
   fetchWeather: typeof fetchWeather;
   weather: WeatherData;
+  error?: string;
 }
 
 const styles = StyleSheet.create({
@@ -45,14 +53,16 @@ class Home extends Component<HomeProps> {
         ? PERMISSIONS.IOS.LOCATION_WHEN_IN_USE
         : PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION,
     );
+
     if (res === RESULTS.GRANTED) {
       this.fetchLocation();
-    } else if (res === RESULTS.DENIED) {
+    } else {
       const requestResult = await request(
         Platform.OS === 'ios'
           ? PERMISSIONS.IOS.LOCATION_WHEN_IN_USE
           : PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION,
       );
+
       if (requestResult === RESULTS.GRANTED) {
         this.fetchLocation();
       } else {
@@ -62,7 +72,7 @@ class Home extends Component<HomeProps> {
   };
 
   fetchLocation = () => {
-    Geocoder.fallbackToGoogle('AIzaSyA5v8nwpRWNl-j96sqv6GKfHBFpLr5dXk8');
+    Geocoder.fallbackToGoogle(Config.GOOGLE_MAPS_API_KEY);
     Geocoder.forceGoogleOnIos(true);
     Geolocation.getCurrentPosition((position) => {
       Geocoder.geocodePosition({
@@ -84,12 +94,13 @@ class Home extends Component<HomeProps> {
 
   render() {
     const {city, country} = this.state;
-
     return (
       <View style={styles.container}>
-        {this.props.weather === null && (
+        {this.props.weather === null && this.props.error === null && (
           <ActivityIndicator color={'#000000'} size="large" />
         )}
+
+        {this.props.error && <Text>{this.props.error}</Text>}
 
         {this.props.weather && (
           <Weather data={this.props.weather} city={city} country={country} />
@@ -100,6 +111,7 @@ class Home extends Component<HomeProps> {
 }
 const mapStateToProps = (state: any) => ({
   weather: state.weather.weather,
+  error: state.weather.error,
 });
 
 const mapDispatchToProps = {
